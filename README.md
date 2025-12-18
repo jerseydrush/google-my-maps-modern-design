@@ -1,6 +1,6 @@
 # 🗺️ My Maps Modern Design
 
-[![Version](https://img.shields.io/badge/version-2.3.3-green.svg)](https://github.com/bbublllikk/my-maps-modern-design)
+[![Version](https://img.shields.io/badge/version-2.3.3-green.svg)](https://github.com/Bubliktgg/google-my-maps-modern-design)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
 
 **Google My Maps Modern Design** — расширение для Chrome, которое улучшает внешний вид интерфейса Google My Maps с современными скруглениями, тенями и анимациями.
