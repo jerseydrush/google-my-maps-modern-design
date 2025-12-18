@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "My Maps — Modern Design",
-    "version": "2.3.2",
-    "description": "Updated design for Google My Maps by bbublllikk",
+    "name": "My Maps — Updated Design",
+    "version": "2.3.3",
+    "description": "Morden design for Google My Maps by bbublllikk",
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
@@ -31,6 +31,7 @@
                 "https://www.google.com/maps/d/u/*/edit*"
             ],
             "js": [
+                "pataka-base64.js",
                 "content.js"
             ],
             "css": [

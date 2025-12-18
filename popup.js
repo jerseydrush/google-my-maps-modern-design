@@ -3,7 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const status = document.getElementById('status');
     const pageInfo = document.getElementById('pageInfo');
 
-    // Загружаем информацию о странице
+    if (githubLink) {
+        githubLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            chrome.tabs.create({
+                url: 'https://github.com/Bubliktgg/google-my-maps-modern-design'
+            });
+        });
+    }
+
     loadPageInfo();
 
     refreshBtn.addEventListener('click', function () {

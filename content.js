@@ -1,5 +1,21 @@
 // content.js
 
+// ===== УСТАНОВКА ЛОГОТИПА =====
+function setPatakaLogo() {
+    // Создаем стиль с переменной
+    const style = document.createElement('style');
+    style.id = 'pataka-logo-style';
+    style.textContent = `
+        :root {
+            --pataka-logo: url(${PATAKA_BASE64}) !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Устанавливаем логотип
+setPatakaLogo();
+
 // Функции определения типа страницы
 function getPageType() {
     const url = window.location.href;
