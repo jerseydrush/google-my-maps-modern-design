@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "My Maps — Updated Design",
-    "version": "2.4",
+    "version": "2.4.1",
     "description": "Morden design for Google My Maps by bbublllikk",
     "web_accessible_resources": [
         {
@@ -23,16 +23,17 @@
         "storage"
     ],
     "host_permissions": [
-        "https://www.google.com/maps/d/u/*/",
-        "https://www.google.com/maps/d/u/*/viewer*",
-        "https://www.google.com/maps/d/u/*/edit*"
+        "https://www.google.com/maps/d/*"
     ],
     "content_scripts": [
         {
             "matches": [
                 "https://www.google.com/maps/d/u/*/",
+                "https://www.google.com/maps/d/viewer*",
                 "https://www.google.com/maps/d/u/*/viewer*",
-                "https://www.google.com/maps/d/u/*/edit*"
+                "https://www.google.com/maps/d/edit*",
+                "https://www.google.com/maps/d/u/*/edit*",
+                "https://www.google.com/maps/d/u/*/copy*"
             ],
             "js": [
                 "pataka-base64.js",

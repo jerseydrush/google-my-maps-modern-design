@@ -52,7 +52,7 @@ new MutationObserver(() => {
     }
 }).observe(document.head, { childList: true, subtree: true });
 
-// ===== УСТАНОВКА ЛОГОТИПА С ПРОВЕРКОЙ =====
+// ===== ДЕКОРАТИВНАЯ КАРТИНКА ПАТАКИ =====
 function setPatakaLogo() {
     try {
         // Проверяем наличие переменной PATAKA_BASE64
@@ -67,32 +67,82 @@ function setPatakaLogo() {
             return;
         }
 
+        const pageType = getPageType();
         const style = document.createElement('style');
         style.id = 'pataka-logo-style';
-        style.textContent = `
+
+        // Базовые стили для всех страниц
+        let css = `
             :root {
                 --pataka-logo: url(${PATAKA_BASE64}) !important;
             }
-            
-            .gm-style>div:first-child::before {
-                content: '';
-                position: absolute;
-                right: 108px;
-                width: 48px;
-                height: 48px;
-                background-image: var(--pataka-logo, none);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                opacity: 1;
-                z-index: 999;
-                pointer-events: none;
-            }
         `;
+
+        // Разные позиции для разных типов страниц
+        if (pageType === 'viewer') {
+            // Позиция для страницы просмотра
+            css += `
+                .gm-style>div:first-child::before {
+                    content: '';
+                    position: absolute;
+                    right: 6px;
+                    bottom: 70px;
+                    width: 48px;
+                    height: 48px;
+                    background-image: var(--pataka-logo, none);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 1;
+                    z-index: 999;
+                    pointer-events: none;
+                }
+            `;
+        } else if (pageType === 'edit') {
+            // Позиция для страницы редактирования (как у вас сейчас)
+            css += `
+                .gm-style>div:first-child::before {
+                    content: '';
+                    position: absolute;
+                    right: 5px;
+                    bottom: 140px;
+                    width: 48px;
+                    height: 48px;
+                    background-image: var(--pataka-logo, none);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 1;
+                    z-index: 999;
+                    pointer-events: none;
+                }
+            `;
+        } else {
+            // Для главной страницы и других (опционально)
+            css += `
+                .QT3Do-haAclf>div:first-child::before {
+                    content: '';
+                    position: absolute;
+                    left: 20px;
+                    bottom: 20px;
+                    width: 48px;
+                    height: 48px;
+                    background-image: var(--pataka-logo, none);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 1;
+                    z-index: 999;
+                    pointer-events: none;
+                }
+            `;
+        }
+
+        style.textContent = css;
         document.head.appendChild(style);
-        console.log('Логотип Pataka установлен');
+        console.log(`Патака создана для страницы: ${pageType}`);
     } catch (error) {
-        console.warn('Не удалось установить логотип:', error.message);
+        console.warn('Не удалось создать Патаку:', error.message);
     }
 }
 
