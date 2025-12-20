@@ -162,12 +162,12 @@ div.XKSfm-Sx9Kwc,
 
 .gm-style-cc div {
     background: none !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
     transition: all 0.2s ease !important;
 }
 
 .gm-style-cc div:first-child {
-    border-radius: 10px !important;
-    backdrop-filter: blur(10px) !important;
     background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
@@ -343,13 +343,19 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     border-bottom-color: rgb(8, 66, 160) !important;
 }
 
-.QA0Szd-ibnC6b {
+.QA0Szd-ibnC6b,
+.G0jgYd-b0t70b-jRmmHf-aVTXAb-haAclf,
+.G0jgYd-b0t70b-KDwhZb-aVTXAb-haAclf,
+.ztA2jd-auswjd {
     transition: all 0.3s ease !important;
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
-.QA0Szd-ibnC6b:hover {
+.QA0Szd-ibnC6b:hover,
+.G0jgYd-b0t70b-jRmmHf-aVTXAb-haAclf:hover,
+.G0jgYd-b0t70b-KDwhZb-aVTXAb-haAclf:hover,
+.ztA2jd-auswjd:hover {
     border-radius: 25px !important;
     color: rgb(8, 66, 160) !important;
     background: var(--dt-primary-container, rgb(244, 248, 255)) !important;
@@ -447,15 +453,41 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 .nA1mMd-INgbqf-RCfa3e,
 .T3iPGc-INgbqf-RCfa3e,
 #stylepopup-color {
-    border-radius: 10px !important;
+    border-radius: 25px !important;
     overflow: hidden !important;
-    background: var(--dt-primary-container, rgb(244, 248, 255)) !important;
+    background: var(--dt-primary-container, rgb(243, 246, 249)) !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     border: 1px solid transparent !important;
 }
 
-#directionsToolbar {
-    margin-left: 7px !important;
+#drawingToolbar,
+#drawingToolbar,
+#measureToolbar,
+#measureToolbar,
+#mobileToolbar {
+    background: var(--dt-primary-container, rgb(255, 255, 255)) !important;
+}
+
+/* Кнопки панели инструментов */
+#drawingToolbar .VIpgJd-INgbqf-LgbsSe-gk6SMd,
+#drawingToolbar .VIpgJd-INgbqf-LgbsSe-barxie,
+#measureToolbar .VIpgJd-INgbqf-LgbsSe-gk6SMd,
+#measureToolbar .VIpgJd-INgbqf-LgbsSe-barxie,
+#mobileToolbar .VIpgJd-INgbqf-LgbsSe-barxie {
+    border-radius: 25px !important;
+    background: rgba(58, 124, 231, 0.2) !important;
+}
+
+:root:not(._) #zoomToolbar .VIpgJd-INgbqf-LgbsSe,
+:root:not(._) #undoRedoToolbar .VIpgJd-INgbqf-LgbsSe,
+:root:not(._) #undoRedoToolbar .VIpgJd-INgbqf-xl07Ob-LgbsSe,
+:root:not(._) #drawingToolbar .VIpgJd-INgbqf-LgbsSe,
+:root:not(._) #directionsToolbar .VIpgJd-INgbqf-LgbsSe,
+:root:not(._) #measureToolbar .VIpgJd-INgbqf-LgbsSe,
+:root:not(._) #measureToolbar .VIpgJd-INgbqf-xl07Ob-LgbsSe,
+:root:not(._) #mobileToolbar .VIpgJd-INgbqf-LgbsSe {
+    border-right: none !important;
+    background-image: none !important;
 }
 
 .eCT9zd-V67aGc,
@@ -467,34 +499,34 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     padding: 5px 5px !important;
 }
 
-/* Кнопки панели инструментов */
 .VIpgJd-INgbqf-LgbsSe {
     border-radius: 0 !important;
     transition: all 0.2s ease !important;
 }
 
 .VIpgJd-INgbqf-LgbsSe:first-child {
-    border-radius: 10px 0 0 10px !important;
+    border-radius: 25px 0 0 25px !important;
 }
 
 .VIpgJd-INgbqf-LgbsSe:last-child {
-    border-radius: 0 10px 10px 0 !important;
+    border-radius: 0 25px 25px 0 !important;
 }
 
 .VIpgJd-INgbqf-LgbsSe:hover {
-    background-color: #f8f9fa !important;
+    background-color: #dfebff !important;
 }
 
 .VIpgJd-INgbqf-LgbsSe:not(.VIpgJd-INgbqf-LgbsSe-OWB6Me):hover {
-    background-color: #f1f3f4 !important;
+    background-color: #dfebff !important;
     transform: translateY(-1px) !important;
 }
 
 .VIpgJd-INgbqf-LgbsSe:active {
-    background-color: #e8f0fe !important;
+    background-color: #caddfe !important;
     transform: translateY(0) !important;
 }
 
+#bbe8ff,
 .VIpgJd-INgbqf-LgbsSe-OWB6Me {
     opacity: 0.5 !important;
 }
@@ -786,7 +818,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 .i4ewOd-h9d3hd-xl07Ob-LgbsSe {
     right: 40px !important;
-    bottom: 52px !important;
+    bottom: 53px !important;
 }
 
 /* ===== СЛАЙДЕРЫ ===== */
@@ -905,7 +937,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
 /* Для всех элементов с overflow: scroll/auto */
 * {
     scrollbar-width: thin !important;
-    scrollbar-color: rgba(45, 75, 100, 0.3) transparent !important;
+    scrollbar-color: rgba(45, 75, 100, 0.2) transparent !important;
 }
 
 /* Chrome/Edge/Safari - для всех элементов */
@@ -932,14 +964,14 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 /* Ползунок при наведении */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(45, 75, 100, 0.3) !important;
+    background: rgba(45, 75, 100, 0.2) !important;
     border: 3px solid transparent !important;
     background-clip: content-box !important;
 }
 
 /* Активный ползунок */
 ::-webkit-scrollbar-thumb:active {
-    background: rgba(45, 75, 100, 0.4) !important;
+    background: rgba(45, 75, 100, 0.3) !important;
     border: 3px solid transparent !important;
     background-clip: content-box !important;
 }
