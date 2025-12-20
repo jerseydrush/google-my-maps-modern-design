@@ -306,6 +306,13 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     margin-bottom: 4px !important;
 }
 
+.QA0Szd-xqKM5b-fmcmS,
+.QA0Szd-coe6tb-fmcmS,
+.QA0Szd-ibnC6b-fmcmS {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
 /* Аватарка по центру */
 .QA0Szd-KCsjgf-xJzy8c {
     display: flex !important;
@@ -560,6 +567,13 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    text-align: center !important;
+}
+
+.i4ewOd-LQLjdd li {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 .i4ewOd-TaUzNb-r4nke-haAclf div.i4ewOd-TaUzNb-r4nke {
