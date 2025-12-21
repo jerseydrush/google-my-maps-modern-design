@@ -45,7 +45,8 @@ div.XKSfm-Sx9Kwc,
 .QA0Szd-ibnC6b-Bz112c,
 .QA0Szd-ibnC6b-qwU8Me-Bz112c,
 .PCdOIb,
-.z80M1.N2RpBe::before {
+.z80M1.N2RpBe::before,
+.QT3Do-LgbsSe {
     opacity: .8 !important;
 }
 
@@ -72,7 +73,7 @@ div.XKSfm-Sx9Kwc,
     border-color: rgb(0 0 0 / 60%) transparent !important;
 }
 
-/* Zoom controls - позиционирование */
+/* Zoom controls */
 .nJjxad-bMcfAe-haAclf {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
 }
@@ -85,13 +86,46 @@ div.XKSfm-Sx9Kwc,
     border-radius: 0 0 10px 10px !important;
 }
 
+#zoomToolbar,
+.nJjxad-bMcfAe-haAclf.nJjxad-HzV7m {
+    background: var(--dt-primary-container, rgb(237, 245, 255)) !important;
+}
+
 .nJjxad-LgbsSe {
-    background-color: #ffffff !important;
+    background-color: none !important;
+    opacity: .7 !important;
     transition: all 0.2s ease !important;
 }
 
-.nJjxad-LgbsSe:hover {
-    background-color: #f8f9fa !important;
+.nJjxad-bEDTcc-LgbsSe-n0tgWb-Q4BLdf,
+.nJjxad-m9bMae-LgbsSe-n0tgWb-Q4BLdf,
+.nJjxad-bMcfAe-haAclf.nJjxad-HzV7m {
+    border-radius: 25px !important;
+    transition: all 0.2s ease !important;
+}
+
+.nJjxad-bEDTcc-LgbsSe-n0tgWb-Q4BLdf,
+.nJjxad-m9bMae-LgbsSe-n0tgWb-Q4BLdf {
+    background: rgb(255, 255, 255) !important;
+}
+
+.nJjxad-bEDTcc-LgbsSe-n0tgWb-Q4BLdf:hover,
+.nJjxad-m9bMae-LgbsSe-n0tgWb-Q4BLdf:hover {
+    border-radius: 25px !important;
+    background: rgba(58, 124, 231, 0.2) !important;
+    transform: translateY(-1px) !important;
+}
+
+.nJjxad-LgbsSe {
+    background: url(https://www.gstatic.com/mapspro/images/icons-toolbar-001.svg) !important;
+}
+
+.nJjxad-bEDTcc-LgbsSe {
+    background-position: -42px -21px !important;
+}
+
+.nJjxad-m9bMae-LgbsSe {
+    background-position: -63px -21px !important;
 }
 
 /* Попапы и меню */
@@ -199,6 +233,10 @@ div.XKSfm-Sx9Kwc,
 
 .HzV7m-tJHJj .i4ewOd-r4nke {
     background: none !important;
+}
+
+.i4ewOd-xl07Ob {
+    margin-top: 10px !important;
 }
 
 /* Search background */
@@ -455,7 +493,7 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 #stylepopup-color {
     border-radius: 25px !important;
     overflow: hidden !important;
-    background: var(--dt-primary-container, rgb(243, 246, 249)) !important;
+    background: var(--dt-primary-container, rgb(255, 255, 255)) !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     border: 1px solid transparent !important;
 }
@@ -504,12 +542,8 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     transition: all 0.2s ease !important;
 }
 
-.VIpgJd-INgbqf-LgbsSe:first-child {
-    border-radius: 25px 0 0 25px !important;
-}
-
-.VIpgJd-INgbqf-LgbsSe:last-child {
-    border-radius: 0 25px 25px 0 !important;
+.VIpgJd-INgbqf-LgbsSe {
+    border-radius: 25px 25px !important;
 }
 
 .VIpgJd-INgbqf-LgbsSe:hover {
@@ -522,7 +556,7 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 }
 
 .VIpgJd-INgbqf-LgbsSe:active {
-    background-color: #caddfe !important;
+    background-color: #a3bbe6 !important;
     transform: translateY(0) !important;
 }
 
@@ -779,6 +813,11 @@ TD.jyrRxf-oKdM2c-tJHJj {
 .ztA2jd-SUR3Rd {
     overflow: hidden !important;
     background: var(--dt-primary-container, rgb(247, 250, 253)) !important;
+    border-radius: 25px !important;
+}
+
+.ztA2jd-auswjd {
+    background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
 }
 
 :root:not(._) .G0jgYd-ZMv3u {
@@ -818,7 +857,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 .i4ewOd-h9d3hd-xl07Ob-LgbsSe {
     right: 40px !important;
-    bottom: 53px !important;
+    bottom: 55px !important;
 }
 
 /* ===== СЛАЙДЕРЫ ===== */
@@ -1126,11 +1165,11 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 .ry3kXd .MocG8c {
     border-radius: 25px !important;
+    border: none !important;
     color: rgb(8, 66, 160) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
     transition: all 0.3s ease !important;
-    border: none !important;
 }
 
 .i4ewOd-ibnC6b-V1ur5d,
@@ -1186,7 +1225,6 @@ TD.jyrRxf-oKdM2c-tJHJj {
 }
 
 .QT3Do-LgbsSe {
-    opacity: .8 !important;
     top: -7px !important;
     left: 0 !important;
 }
