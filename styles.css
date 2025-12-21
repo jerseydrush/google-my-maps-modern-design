@@ -650,12 +650,12 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 }
 
 .i4ewOd-TaUzNb-r4nke-haAclf div.i4ewOd-TaUzNb-r4nke {
-    background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
+    background: var(--dt-primary-container, rgb(232, 240, 254, 0.5)) !important;
     color: rgb(8, 66, 160) !important;
     margin: 0 4px !important;
     margin-top: 2px !important;
-    padding: 5px 8px !important;
-    border-radius: 12px !important;
+    padding: 0 8px !important;
+    border-radius: 25px !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
@@ -663,14 +663,14 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 /* Таблица атрибутов */
 .i4ewOd-TaUzNb-p83tee-jyrRxf,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-g7W7Ed-haAclf {
-    background: var(--dt-primary-container, rgb(232, 240, 254, 0.5)) !important;
+    background: var(--dt-primary-container, rgba(232, 240, 254, 0.5)) !important;
     color: rgb(87, 125, 187) !important;
     transition: all 0.3s ease !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
-    border-radius: 12px !important;
+    border-radius: 25px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    padding: 2px 6px !important;
-    margin: 0px 5px !important;
+    padding: 5px 8px !important;
+    margin: 0px 8px !important;
     margin-bottom: 2px !important;
     max-width: 300px !important;
     border-collapse: separate !important;
@@ -731,15 +731,15 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-yTeccb-D6Hlvf-haAclf {
     float: right !important;
-    margin-top: 5% !important;
-    margin-right: 5px !important;
+    margin-top: 3% !important;
+    margin-right: 8px !important;
 }
 
 /* Таблицы */
 #table-top-left-cell,
 .jyrRxf-haAclf TH>DIV:first-child,
 TD.jyrRxf-oKdM2c-tJHJj {
-    border-radius: 12px !important;
+    border-radius: 25px !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
@@ -780,7 +780,8 @@ TD.jyrRxf-oKdM2c-tJHJj {
 }
 
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-p83tee-lTBxed[contenteditable="true"] {
-    padding: 0 5px !important;
+    padding: 0 8px !important;
+    background: var(--dt-primary-container, rgba(242, 247, 255, 0.5)) !important;
 }
 
 .tk3N6e-LgbsSe-JIbuQc,
