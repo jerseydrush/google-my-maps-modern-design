@@ -156,6 +156,7 @@ div.XKSfm-Sx9Kwc,
     border-radius: 25px !important;
     color: rgb(8, 66, 160) !important;
     background: rgba(58, 124, 231, 0.1) !important;
+    outline: none !important;
 }
 
 /* Кнопка режима редактирования */
