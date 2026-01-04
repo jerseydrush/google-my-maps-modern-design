@@ -260,6 +260,10 @@ div.XKSfm-Sx9Kwc,
     transform: translateY(-1px) !important;
 }
 
+.dzWwaf-qqvbed.qqvbed-tJHJj-kn2Jyc .qqvbed-tJHJj {
+    width: 396px !important;
+}
+
 .HzV7m-tJHJj .i4ewOd-r4nke {
     background: none !important;
 }
@@ -442,6 +446,23 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     color: rgb(8, 66, 160) !important;
 }
 
+/* Отображение фото */
+.qqvbed-cGMI2b-HiaYvf {
+    border-radius: 12px !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.qqvbed-cGMI2b-HiaYvf:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.qqvbed-cGMI2b-HiaYvf-cHYyed {
+    background-image: none !important;
+    background-color: none !important;
+}
+
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ РЕДАКТИРОВАНИЯ (EDIT) ===== */
 
 #map-title-desc-bar .i4ewOd-r4nke {
@@ -621,7 +642,8 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 .eCT9zd-V67aGc,
 .b0t70b-V68bde,
 .G0jgYd-b0t70b-KDwhZb-eqAnXb-tJHJj,
-.G0jgYd-b0t70b-jRmmHf-eqAnXb-tJHJj {
+.G0jgYd-b0t70b-jRmmHf-eqAnXb-tJHJj,
+.qqvbed-p83tee-V1ur5d {
     color: rgb(87, 125, 187) !important;
 }
 
@@ -838,6 +860,12 @@ TD.jyrRxf-oKdM2c-tJHJj {
     background: var(--dt-primary-container, rgba(0, 94, 255, 0.1)) !important;
 }
 
+.jyrRxf-haAclf TH.jyrRxf-gk6SMd-tJHJj DIV DIV,
+.tk3N6e-QksUEb-xl07Ob-LgbsSe {
+    background-color: transparent !important;
+
+}
+
 .jyrRxf-UDotu {
     border: none !important;
 }
@@ -907,9 +935,24 @@ TD.jyrRxf-oKdM2c-tJHJj {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
 
+.tk3N6e-QksUEb-xl07Ob-LgbsSe-ZmdkE,
+.tk3N6e-QksUEb-xl07Ob-LgbsSe-auswjd,
+.tk3N6e-QksUEb-xl07Ob-LgbsSe-FNFY6c {
+    background: url(https://ssl.gstatic.com/ui/v1/disclosure/dark-grey-disclosure-arrow-down.png) center no-repeat !important;
+}
+
 #gb a.gb_Ua.gb_Ua,
 #gb a.gb_Va {
     border-radius: 25px !important;
+}
+
+/* Отображение фото */
+.dwFJGb-u7eiKf {
+    border-radius: 25px 25px 0 0 !important;
+}
+
+.dwFJGb-bMcfAe-wEXlac {
+    border-radius: 0 0 25px 25px !important;
 }
 
 /* Панель поиска */
