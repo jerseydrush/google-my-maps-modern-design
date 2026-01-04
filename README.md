@@ -1,6 +1,6 @@
 # 🗺️ My Maps Modern Design
 
-[![Version](https://img.shields.io/badge/version-2.4.6-lightblue.svg)](https://github.com/Bubliktgg/google-my-maps-modern-design/releases)
+[![Version](https://img.shields.io/badge/version-2.4.7-lightblue.svg)](https://github.com/Bubliktgg/google-my-maps-modern-design/releases)
 [![License](https://img.shields.io/badge/license-MIT-darkgrey.svg)](LICENSE)
 
 # ENG:
