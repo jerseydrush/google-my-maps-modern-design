@@ -174,7 +174,9 @@ function styleCheckboxesSafely() {
     try {
         const selectors = [
             '.HzV7m-pbTTYe-PGTmtf.N2RpBe',
-            '.N2RpBe-HzV7m-Aql3ge'
+            '.N2RpBe-HzV7m-Aql3ge',
+            '.uVccjd.SMdMve-MPu53c',
+            '.uVccjd.zSfaEd-MPu53c'
         ];
 
         selectors.forEach(selector => {
