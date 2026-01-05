@@ -932,6 +932,10 @@ TD.jyrRxf-oKdM2c-tJHJj {
     background: var(--dt-primary-container, rgba(0, 33, 91, 0.1)) !important;
 }
 
+.XKSfm-Sx9Kwc-c6xFrd button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
 .XKSfm-Sx9Kwc-bN97Pc textarea {
     padding: 8px 8px !important;
 }
@@ -960,15 +964,6 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 #mapsprosearch-button .tk3N6e-LgbsSe-JIbuQc {
     border-radius: 0 25px 25px 0 !important;
-}
-
-.XKSfm-Sx9Kwc-c6xFrd button {
-    box-shadow: rgba(0, 18, 43, 0.1) 0px 2px 8px !important;
-    transition: all 0.3s ease !important;
-}
-
-.XKSfm-Sx9Kwc-c6xFrd button:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
 
 .tk3N6e-QksUEb-xl07Ob-LgbsSe-ZmdkE,
