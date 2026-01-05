@@ -922,6 +922,11 @@ TD.jyrRxf-oKdM2c-tJHJj {
     background: var(--dt-primary-container, rgba(0, 94, 255, 0.1)) !important;
 }
 
+.XKSfm-Sx9Kwc-c6xFrd button,
+.tk3N6e-LgbsSe-n2to0e {
+    transition: all 0.3s ease !important;
+}
+
 .XKSfm-Sx9Kwc-c6xFrd button:hover,
 .tk3N6e-LgbsSe-n2to0e:hover {
     background: var(--dt-primary-container, rgba(0, 33, 91, 0.1)) !important;
