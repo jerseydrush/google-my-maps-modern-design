@@ -54,12 +54,13 @@ Click the extension icon in the extension panel:
 ## 🏗️ Project Structure
 ```
 my-maps-modern-design/
-├── manifest.json          # Extension configuration
+├── manifest.json         # Extension configuration
 ├── content.js            # Main logic
-├── pataka-base64.js      # Resources
 ├── styles.css            # All styles
 ├── popup.html            # Control interface
 ├── popup.js              # Popup logic
+├── resources/            # Resources
+│   └── pataka.png        # Pataka
 ├── icons/                # Extension icons
 │   ├── icon16.png
 │   ├── icon48.png
