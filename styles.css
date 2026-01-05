@@ -514,14 +514,14 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 }
 
 .tk3N6e-y4JFTd {
-    border: none !important;
     margin: 0 !important;
     flex: 1 !important;
     box-shadow: none !important;
     border-radius: 25px !important;
-    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    border: 0px !important;
+    background: var(--dt-primary-container, rgba(0, 94, 255, 0.1)) !important;
     color: rgb(8, 66, 160) !important;
-    background: var(--dt-primary-container, rgb(232, 240, 254, 0.2)) !important;
+    transition: all 0.3s ease !important;
 }
 
 .tk3N6e-y4JFTd:focus {
@@ -1262,6 +1262,14 @@ TD.jyrRxf-oKdM2c-tJHJj {
 .i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-rymPhb-ibnC6b-haAclf:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
+}
+
+/* Центрирование кнопок в строке по вертикали */
+.QT3Do-t0O6ic-LgbsSe-haAclf {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    height: 100% !important;
 }
 
 .QT3Do-t0O6ic-LgbsSe-haAclf .QT3Do-t0O6ic-LgbsSe {

@@ -1,12 +1,13 @@
 {
     "manifest_version": 3,
     "name": "My Maps — Updated Design",
-    "version": "2.4.7",
+    "version": "2.4.8",
     "description": "Morden design for Google My Maps by bbublllikk",
     "web_accessible_resources": [
         {
             "resources": [
-                "icons/favicon.png"
+                "icons/favicon.png",
+                "resources/pataka.png"
             ],
             "matches": [
                 "<all_urls>"
@@ -20,7 +21,8 @@
     },
     "permissions": [
         "activeTab",
-        "storage"
+        "storage",
+        "scripting"
     ],
     "host_permissions": [
         "https://www.google.com/maps/d/*"
@@ -38,7 +40,6 @@
                 "https://www.google.com/maps/d/u/*/copy*"
             ],
             "js": [
-                "pataka-base64.js",
                 "content.js"
             ],
             "css": [

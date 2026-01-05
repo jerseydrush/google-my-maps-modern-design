@@ -1,13 +1,10 @@
-// content.js - My Maps Modern Design (Оптимизированная версия)
+// content.js - My Maps Modern Design
 
 // ===== КОНФИГУРАЦИЯ =====
 const CONFIG = {
     checkboxes: {
         borderColor: '#1d458540',
         checkedColor: '#1d458540'
-    },
-    header: {
-        backgroundColor: '#7a7a7a'
     },
     timing: {
         initialDelay: 2000,
@@ -55,26 +52,17 @@ new MutationObserver(() => {
 // ===== ДЕКОРАТИВНАЯ КАРТИНКА ПАТАКИ =====
 function setPatakaLogo() {
     try {
-        // Проверяем наличие переменной PATAKA_BASE64
-        if (typeof PATAKA_BASE64 === 'undefined' || !PATAKA_BASE64) {
-            console.warn('PATAKA_BASE64 не определена, пропускаем установку логотипа');
-            return;
-        }
-
-        // Проверяем валидность base64
-        if (!PATAKA_BASE64.startsWith('data:image/')) {
-            console.warn('PATAKA_BASE64 должна быть data URL');
-            return;
-        }
-
         const pageType = getPageType();
         const style = document.createElement('style');
         style.id = 'pataka-logo-style';
 
+        // Получаем URL картинки из ресурсов расширения
+        const patakaUrl = chrome.runtime.getURL('resources/pataka.png');
+
         // Базовые стили для всех страниц
         let css = `
             :root {
-                --pataka-logo: url(${PATAKA_BASE64}) !important;
+                --pataka-logo: url(${patakaUrl}) !important;
             }
         `;
 
@@ -99,7 +87,7 @@ function setPatakaLogo() {
                 }
             `;
         } else if (pageType === 'edit') {
-            // Позиция для страницы редактирования (как у вас сейчас)
+            // Позиция для страницы редактирования
             css += `
                 .gm-style>div:first-child::before {
                     content: '';
@@ -118,7 +106,7 @@ function setPatakaLogo() {
                 }
             `;
         } else {
-            // Для главной страницы и других (опционально)
+            // Для главной страницы и других
             css += `
                 .QT3Do-haAclf>div:first-child::before {
                     content: '';
@@ -439,180 +427,11 @@ function enhanceSlidersWithProgress() {
     }
 }
 
-// ===== СТИЛИ ДЛЯ СТРАНИЦ =====
-function applyViewerStyles() {
-    console.log('🎨 Применяем стили для страницы просмотра');
-
-    // Заголовок
-    safeQuerySelector('.HzV7m-tJHJj, .HzV7m-tJHJj .i4ewOd-r4nke').forEach(element => {
-        if (element?.style) {
-            element.style.backgroundColor = CONFIG.header.backgroundColor;
-        }
-    });
-
-    // Информационные блоки
-    safeQuerySelector('.mU4ghb-X9G3K-tJHJj').forEach(block => {
-        if (block?.style) {
-            Object.assign(block.style, {
-                margin: '12px',
-                padding: '16px 20px',
-                borderRadius: '12px',
-                border: '1px solid #e0e0e0',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                backgroundColor: '#ffffff'
-            });
-        }
-    });
-
-    // Кнопки редактирования
-    safeQuerySelector('.b0t70b-haAclf').forEach(button => {
-        if (button?.style) {
-            button.style.borderRadius = '10px';
-            button.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.2)';
-        }
-    });
-
-    // Основные контейнеры
-    safeQuerySelector('div.XKSfm-Sx9Kwc').forEach(element => {
-        if (element?.style) {
-            Object.assign(element.style, {
-                borderRadius: '10px',
-                overflow: 'hidden',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-                border: '1px solid #e0e0e0'
-            });
-        }
-    });
-}
-
-function applyEditStyles() {
-    console.log('🎨 Применяем стили для страницы редактирования');
-
-    // Основные контейнеры
-    safeQuerySelector('div.XKSfm-Sx9Kwc').forEach(element => {
-        if (element?.style) {
-            Object.assign(element.style, {
-                borderRadius: '10px',
-                overflow: 'hidden',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-                border: '1px solid #e0e0e0'
-            });
-        }
-    });
-}
-
-// ===== СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ =====
-function applyMainPageStyles() {
-    console.log('🎨 Применяем стили для главной страницы');
-
-    // Скрываем ripple-эффект (как в CSS: display: none !important)
-    safeQuerySelector('.i4ewOd-rymPhb-haAclf-yOOK0 .MbhUzd, .FAGNtc.MbhUzd').forEach(element => {
-        if (element?.style) {
-            element.style.display = 'none';
-        }
-    });
-
-    // Скрываем градиентный оверлей
-    safeQuerySelector('.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-ibnC6b-JUCs7e-n5VRYe').forEach(element => {
-        if (element?.style) {
-            element.style.display = 'none';
-        }
-    });
-
-    // Стили для списка карт на главной
-    safeQuerySelector('.mU4ghb-IT5dJd').forEach(element => {
-        if (element?.style) {
-            Object.assign(element.style, {
-                borderRadius: '12px',
-                border: '1px solid #e0e0e0',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                margin: '8px'
-            });
-        }
-    });
-
-    // Карточки карт - улучшенные стили
-    safeQuerySelector('.NlWrkb').forEach(card => {
-        if (card?.style) {
-            Object.assign(card.style, {
-                borderRadius: '10px',
-                overflow: 'hidden',
-                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.2s ease, box-shadow 0.2s ease'
-            });
-
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-2px)';
-                card.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-                card.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
-            });
-        }
-    });
-
-    // Элементы списка с правильными скруглениями
-    safeQuerySelector('.i4ewOd-rymPhb-ibnC6b-haAclf').forEach((element, index, array) => {
-        if (element?.style) {
-            if (index === 0) {
-                // Первый элемент
-                element.style.borderRadius = '12px 12px 0 0';
-                element.style.borderBottom = 'none';
-            } else if (index === array.length - 1) {
-                // Последний элемент
-                element.style.borderRadius = '0 0 12px 12px';
-                element.style.borderTop = 'none';
-            } else {
-                // Средние элементы
-                element.style.borderRadius = '0';
-                element.style.borderTop = 'none';
-                element.style.borderBottom = 'none';
-            }
-        }
-    });
-}
-
-function applyCommonStyles() {
-    console.log('🎨 Применяем общие стили');
-
-    // Элементы управления зумом
-    safeQuerySelector('.nJjxad-bMcfAe-haAclf').forEach(control => {
-        if (control?.style) control.style.borderRadius = '10px';
-    });
-
-    // Кнопки увеличения/уменьшения
-    safeQuerySelector('.nJjxad-bEDTcc-LgbsSe').forEach(button => {
-        if (button?.style) button.style.borderRadius = '10px 10px 0 0';
-    });
-
-    safeQuerySelector('.nJjxad-m9bMae-LgbsSe').forEach(button => {
-        if (button?.style) button.style.borderRadius = '0 0 10px 10px';
-    });
-
-    // Фикс кнопки переключения карты
-    safeQuerySelector('.OFA0We-haAclf .OFA0We-HzV7m, div.OFA0We-haAclf.OFA0We-HzV7m').forEach(element => {
-        if (element?.style) {
-            element.style.marginTop = '0';
-        }
-    });
-}
-
 // ===== ФУНКЦИЯ ПРИМЕНЕНИЯ ВСЕХ СТИЛЕЙ =====
 function applyAllStyles() {
     const pageType = getPageType();
     console.log(`🎨 My Maps Modern Design: ${pageType} страница`);
 
-    if (pageType === 'viewer') {
-        applyViewerStyles();
-    } else if (pageType === 'edit') {
-        applyEditStyles();
-    } else if (pageType === 'main') {
-        applyMainPageStyles();
-    }
-
-    applyCommonStyles();
     styleCheckboxesSafely();
     enhanceSlidersWithProgress();
 }
@@ -623,13 +442,8 @@ function createDOMObserver() {
         const observer = new MutationObserver(() => {
             // Проверяем наличие целевых элементов
             const targetSelectors = [
-                '.HzV7m-tJHJj',
-                '.mU4ghb-X9G3K-tJHJj',
-                'div.XKSfm-Sx9Kwc',
-                '.VIpgJd-SxecR',
                 '.HzV7m-pbTTYe-PGTmtf',
-                '.i4ewOd-rymPhb-ibnC6b-haAclf', // Для главной страницы
-                '.NlWrkb' // Карточки на главной
+                '.VIpgJd-SxecR'
             ];
 
             const hasChanges = targetSelectors.some(selector =>

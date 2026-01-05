@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <style>
         body {
-            width: 300px;
+            width: 320px;
             padding: 0;
             margin: 0;
             font-family: 'Segoe UI', system-ui, sans-serif;
@@ -19,12 +19,63 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
         h3 {
-            margin: 0 0 16px 0;
+            margin: 0;
             color: #202124;
-            text-align: center;
             font-weight: 600;
             font-size: 16px;
+        }
+
+        /* Стили для переключателя языка */
+        .lang-switcher {
+            display: flex;
+            gap: 4px;
+            background: #f1f3f4;
+            border-radius: 20px;
+            padding: 2px;
+            position: relative;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 18px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #5f6368;
+            transition: all 0.2s ease;
+            z-index: 1;
+        }
+
+        .lang-btn.active {
+            color: #202124;
+        }
+
+        .lang-indicator {
+            position: absolute;
+            top: 2px;
+            height: calc(100% - 4px);
+            border-radius: 18px;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 0;
+        }
+
+        .version-info {
+            font-size: 11px;
+            color: #5f6368;
+            margin-bottom: 16px;
+            text-align: center;
         }
 
         .status {
@@ -61,6 +112,10 @@
             font-weight: 500;
             transition: all 0.2s ease;
             margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
         .refresh-btn:hover {
@@ -103,33 +158,52 @@
             margin: 12px 0 8px 0;
             font-size: 13px;
         }
+
+        a {
+            color: #0b57d0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h3>🎨 My Maps Modern Design</h3>
+        <div class="header">
+            <h3>🎨 My Maps Modern Design</h3>
+            <div class="lang-switcher">
+                <div class="lang-indicator" id="langIndicator"></div>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+            </div>
+        </div>
 
         <div class="version-info">
-            Версия 2.4.7 | <a href="https://github.com/Bubliktgg/google-my-maps-modern-design"
-                id="githubLink">GitHub</a>
+            Version 2.4.8 | <a href="https://github.com/Bubliktgg/google-my-maps-modern-design" id="githubLink"
+                target="_blank">GitHub</a> <!-- Добавили target="_blank" -->
         </div>
 
         <div class="page-info" id="pageInfo">
-            Загрузка информации о странице...
+            Loading page information...
         </div>
 
-        <div class="section-title">Применённые улучшения:</div>
+        <div class="section-title" id="featuresTitle">Applied improvements:</div>
         <div class="features">
-            <ul>
-                <li><strong>Обновление окон:</strong> Добавлены скругления, улучшен дизайн</li>
-                <li><strong>Современные тени:</strong> Глубина и объём</li>
-                <li><strong>Плавные анимации:</strong> Эффекты при наведении</li>
-                <li><strong>Улучшенные панели:</strong> Поиск, инструменты, зум и другие</li>
-                <li><strong>Блочный дизайн:</strong> Стильные блоки</li>
+            <ul id="featuresList">
+                <li><strong>Updated windows:</strong> Added rounding, improved design</li>
+                <li><strong>Modern shadows:</strong> Depth and volume</li>
+                <li><strong>Smooth animations:</strong> Hover effects</li>
+                <li><strong>Improved panels:</strong> Search, tools, zoom and others</li>
+                <li><strong>Block design:</strong> Stylish blocks</li>
             </ul>
         </div>
 
-        <button class="refresh-btn" id="refreshStyles">🔄 Обновить стили</button>
+        <button class="refresh-btn" id="refreshStyles">
+            <span>🔄</span>
+            <span id="refreshText">Refresh styles</span>
+        </button>
 
         <div id="status" class="status"></div>
     </div>
