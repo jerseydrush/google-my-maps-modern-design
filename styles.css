@@ -1358,16 +1358,22 @@ TD.jyrRxf-oKdM2c-tJHJj {
     transition: all 0.3s ease !important;
 }
 
-/* Фиксы выпадающих меню для print и на главной странице */
-.MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb {
-    border: none !important;
-}
-
 .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb:hover,
 .MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb:hover,
 .kx3Hed:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
+}
+
+.kx3Hed {
+    padding: 0px 15px 0 15px !important;
+    max-height: 96% !important;
+    box-shadow: none !important;
+}
+
+/* Фиксы выпадающих меню для print и на главной странице */
+.MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb {
+    border: none !important;
 }
 
 .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb:hover,
@@ -1397,11 +1403,6 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 .i4ewOd-ibnC6b-Tswv1b-V1ur5d-haAclf {
     margin-bottom: 2px !important;
-}
-
-.kx3Hed {
-    padding: 0px 15px 0 15px !important;
-    max-height: 96% !important;
 }
 
 .i4ewOd-rymPhb-haAclf-yOOK0-AznF2e {
