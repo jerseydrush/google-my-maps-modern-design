@@ -30,7 +30,7 @@ function init() {
     try {
         changeFavicon();
     } catch (error) {
-        console.error('Ошибка при замене иконки:', error);
+        console.error('Error when replacing the favicon:', error);
     }
 }
 
@@ -128,9 +128,9 @@ function setPatakaLogo() {
 
         style.textContent = css;
         document.head.appendChild(style);
-        console.log(`Патака создана для страницы: ${pageType}`);
+        console.log(`Pataka created for page: ${pageType}`);
     } catch (error) {
-        console.warn('Не удалось создать Патаку:', error.message);
+        console.warn('Failed to create Pataka:', error.message);
     }
 }
 
@@ -152,7 +152,7 @@ function safeQuerySelector(selector) {
     try {
         return document.querySelectorAll(selector);
     } catch (e) {
-        console.warn(`Некорректный селектор: ${selector}`, e.message);
+        console.warn(`Invalid selector: ${selector}`, e.message);
         return [];
     }
 }
@@ -191,7 +191,7 @@ function styleCheckboxesSafely() {
             });
         });
     } catch (error) {
-        console.warn('Ошибка стилизации чекбоксов:', error.message);
+        console.warn('Checkbox styling error:', error.message);
     }
 }
 
@@ -419,19 +419,16 @@ function enhanceSlidersWithProgress() {
                 });
 
             } catch (sliderError) {
-                console.warn('Ошибка улучшения слайдера:', sliderError.message);
+                console.warn('Slider improvement error:', sliderError.message);
             }
         });
     } catch (error) {
-        console.warn('Ошибка в enhanceSlidersWithProgress:', error.message);
+        console.warn('Error in enhanceSlidersWithProgress:', error.message);
     }
 }
 
 // ===== ФУНКЦИЯ ПРИМЕНЕНИЯ ВСЕХ СТИЛЕЙ =====
 function applyAllStyles() {
-    const pageType = getPageType();
-    console.log(`🎨 My Maps Modern Design: ${pageType} страница`);
-
     styleCheckboxesSafely();
     enhanceSlidersWithProgress();
 }
@@ -439,8 +436,9 @@ function applyAllStyles() {
 // ===== НАБЛЮДАТЕЛЬ ЗА ИЗМЕНЕНИЯМИ =====
 function createDOMObserver() {
     try {
+        let timeoutId;
+
         const observer = new MutationObserver(() => {
-            // Проверяем наличие целевых элементов
             const targetSelectors = [
                 '.HzV7m-pbTTYe-PGTmtf',
                 '.VIpgJd-SxecR'
@@ -451,8 +449,9 @@ function createDOMObserver() {
             );
 
             if (hasChanges) {
-                console.log('🔄 Обнаружены изменения DOM');
-                setTimeout(applyAllStyles, 100);
+                // Дебаунс чтобы не вызывать слишком часто
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(applyAllStyles, 300);
             }
         });
 
@@ -463,7 +462,7 @@ function createDOMObserver() {
 
         return observer;
     } catch (error) {
-        console.warn('Не удалось создать DOM observer:', error.message);
+        console.warn('Failed to create DOM observer:', error.message);
         return null;
     }
 }
@@ -472,7 +471,7 @@ function createDOMObserver() {
 function initialize() {
     try {
         const pageType = getPageType();
-        console.log(`🚀 My Maps Modern Design запущен (${pageType})`);
+        console.log(`🚀 My Maps Modern Design launched (${pageType})`);
 
         setPatakaLogo();
         applyAllStyles();
@@ -485,7 +484,7 @@ function initialize() {
         }, CONFIG.timing.recheckDelay);
 
     } catch (error) {
-        console.error('❌ Ошибка инициализации:', error);
+        console.error('❌ Initialization error:', error);
     }
 }
 
@@ -508,13 +507,13 @@ function setupMessageHandlers() {
                     });
                 }
             } catch (error) {
-                console.warn('Ошибка обработки сообщения:', error.message);
+                console.warn('Message processing error:', error.message);
                 sendResponse({ success: false, error: error.message });
             }
             return true;
         });
     } catch (error) {
-        console.warn('Не удалось настроить обработчики сообщений:', error.message);
+        console.warn('Failed to configure message handlers:', error.message);
     }
 }
 
