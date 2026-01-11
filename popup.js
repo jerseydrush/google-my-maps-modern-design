@@ -78,11 +78,29 @@ document.addEventListener('DOMContentLoaded', function () {
     function isGoogleMyMapsUrl(url) {
         if (!url) return false;
 
-        // Проверяем любой URL Google Maps, начинающийся с /maps/d/
         try {
             const urlObj = new URL(url);
-            return urlObj.hostname === 'www.google.com' &&
-                urlObj.pathname.startsWith('/maps/d/');
+            const hostname = urlObj.hostname.toLowerCase();
+
+            // Основные проверяемые домены
+            const supportedDomains = [
+                'www.google.com',
+                'www.google.com.ua',
+                'www.google.co.uk',
+                'www.google.com.tr',
+                'www.google.de',
+                'www.google.fr',
+                'www.google.pl',
+                'www.google.ru'
+            ];
+
+            // Проверяем точное совпадение с поддерживаемыми доменами
+            // ИЛИ проверяем по регулярному выражению для других доменов Google
+            const isGoogleDomain = supportedDomains.includes(hostname) ||
+                /^www\.google\.[a-z]{2,3}(\.[a-z]{2})?$/.test(hostname);
+
+            // Проверяем путь на соответствие Google My Maps
+            return isGoogleDomain && urlObj.pathname.startsWith('/maps/d/');
         } catch (e) {
             return false;
         }
