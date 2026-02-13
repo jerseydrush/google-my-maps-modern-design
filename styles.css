@@ -256,7 +256,7 @@ div.XKSfm-Sx9Kwc,
     margin: 12px !important;
     border-radius: 12px !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
     background: var(--dt-primary-container, rgba(29, 69, 133)) !important;
     backdrop-filter: blur(10px) !important;
     transition: all 0.3s ease !important;
@@ -320,6 +320,10 @@ div.XKSfm-Sx9Kwc,
     opacity: 1 !important;
 }
 
+.ziykHb.VfPpkd-suEOdc-OWXEXe-nzrxxc .VfPpkd-z59Tgd {
+    border-radius: 25px !important;
+}
+
 /* Информационный блок */
 .mU4ghb-X9G3K-tJHJj,
 .G0jgYd-b0t70b-x5cW0b-i4ewOd,
@@ -330,7 +334,7 @@ div.XKSfm-Sx9Kwc,
     border-radius: 12px !important;
     border: 0px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
     background: rgb(229, 239, 255) !important;
     transition: all 0.3s ease !important;
 }
@@ -457,8 +461,15 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 
 /* Details from Google Maps на Viewer */
 .qqvbed-VTkLkc.fO2voc-jRmmHf-LJTIlf {
+    border-radius: 12px !important;
     padding: 20px 100px 12px 25px !important;
     margin: 8px 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.qqvbed-VTkLkc.fO2voc-jRmmHf-LJTIlf:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
 }
 
 /* Отображение фото */
