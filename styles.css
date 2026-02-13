@@ -876,8 +876,14 @@ div.fO2voc-jRmmHf-LJTIlf {
     border-radius: 25px !important;
     border: 0px solid !important;
     color: rgb(8, 66, 160) !important;
+    box-shadow: none !important;
+    background: var(--dt-primary-container, rgb(0, 94, 255, 0.1)) !important;
+    transition: all 0.3s ease !important;
+}
+
+.VIpgJd-Kb3HCc-xl07Ob-LgbsSe:hover,
+.EDlbXc-dZ8yzd-jCCvxc-LgbsSe:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
 }
 
 #table-toolbar {
@@ -950,7 +956,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 .XKSfm-Sx9Kwc-c6xFrd button:hover,
 .tk3N6e-LgbsSe-n2to0e:hover {
-    background: var(--dt-primary-container, rgba(0, 33, 91, 0.1)) !important;
+    background: var(--dt-primary-container, rgba(0, 65, 176, 0.15)) !important;
 }
 
 .XKSfm-Sx9Kwc-c6xFrd button:hover {
