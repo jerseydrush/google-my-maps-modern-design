@@ -1286,6 +1286,12 @@ TD.jyrRxf-oKdM2c-tJHJj {
     border-radius: 25px !important;
 }
 
+.c7fp5b>.lVYxmb,
+.FS4hgd.iWO5td>.lVYxmb {
+    background-image: -webkit-radial-gradient(circle farthest-side, rgba(66, 133, 244, 0.25), rgba(66, 133, 244, 0.25) 80%, transparent 100%) !important;
+    background-image: radial-gradient(circle farthest-side, rgba(66, 133, 244, 0.25), rgba(66, 133, 244, 0.25) 80%, transparent 100%) !important;
+}
+
 #mapsprosearch-button,
 #mapsprosearch-field.tk3N6e-y4JFTd {
     border: none !important;
