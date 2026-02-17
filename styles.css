@@ -1735,6 +1735,23 @@ TD.jyrRxf-oKdM2c-tJHJj {
     margin-top: 6px !important;
 }
 
+.QT3Do-VIpgJd-l4eHX {
+    background-image: url(https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg) !important;
+}
+
+.QT3Do-EaZ7Cc-r4nke {
+    color: var(--dt-on-surface-variant, rgb(95, 99, 104)) !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 1080px) {
+
+    :where(.QT3Do-EaZ7Cc-saED2e-haAclf),
+    :where(.QT3Do-EaZ7Cc-r4nke) {
+        margin-left: 6px !important;
+    }
+}
+
 .PCdOIb.Ce1Y1c {
     left: 16px !important;
     opacity: 1 !important;
