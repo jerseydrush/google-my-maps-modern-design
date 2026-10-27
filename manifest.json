@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "My Maps — Updated Design",
     "version": "2.4.9",
-    "description": "Morden design for Google My Maps by Jersey Drush",
+    "description": "Modern design for Google My Maps by Jersey Drush",
     "web_accessible_resources": [
         {
             "resources": [
@@ -138,6 +138,6 @@
     ],
     "action": {
         "default_popup": "popup.html",
-        "default_title": "Настройки дизайна My Maps"
+        "default_title": "My Maps Settings"
     }
 }
